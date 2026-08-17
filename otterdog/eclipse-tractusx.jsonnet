@@ -1896,5 +1896,24 @@ orgs.newOrg('automotive.tractusx', 'eclipse-tractusx') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('tractusx-fleet-reconcile-demonstrator') {
+      description: "Tractus-X Fleet Reconciliation Demonstrator",
+      allow_merge_commit: true,
+      delete_branch_on_merge: true,
+      dependabot_security_updates_enabled: true,
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
+      homepage: "https://eclipse-tractusx.github.io/tractusx-fleet-reconcile-demonstrator",
+      private_vulnerability_reporting_enabled: true,
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+        deployment_branch_policy: "selected",
+        },
+      ]
+    },
   ],
 }
