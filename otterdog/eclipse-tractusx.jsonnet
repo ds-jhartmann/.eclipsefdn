@@ -1898,7 +1898,7 @@ orgs.newOrg('automotive.tractusx', 'eclipse-tractusx') {
     },
     orgs.newRepo('tractusx-fleet') {
       description: "Fork - Fleet Management Components",
-      forked_repository: 'https://github.com/eclipse-edc/Fleet.git',
+      forked_repository: 'eclipse-edc/Fleet',
       allow_merge_commit: true,
       delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
